@@ -16,3 +16,8 @@ def test_divisao():
 def test_divisao_por_zero():
     with pytest.raises(ValueError):
         divisao(10, 0)
+
+def divisao(a, b):
+    if b == 0:
+        raise ValueError("Divisão por zero")
+    return a / b

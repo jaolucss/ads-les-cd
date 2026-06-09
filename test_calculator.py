@@ -12,3 +12,12 @@ def test_multiplicacao():
 
 def test_divisao():
     assert divisao(8, 2) == 4
+
+def test_divisao_por_zero():
+    with pytest.raises(ValueError):
+        divisao(10, 0)
+
+def divisao(a, b):
+    if b == 0:
+        raise ValueError("Divisão por zero")
+    return a / b
